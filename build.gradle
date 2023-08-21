@@ -24,3 +24,9 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'hello-0.0.1-SNAPSHOT.App'
+    }
+}
