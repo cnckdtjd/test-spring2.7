@@ -28,7 +28,7 @@ tasks.named('test') {
 jar {
 	enabled = false
 	manifest {
-        	attributes 'Main-Class': 'spring.hello.Hello'
+        	attributes 'Main-Class': 'spring.hello.HelloApplication'
     	}
 }
 
