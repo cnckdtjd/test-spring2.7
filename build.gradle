@@ -25,5 +25,9 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
+jar {
+	enabled = false
+}
+
 apply plugin: 'application'
 mainClassName="package.classname"
