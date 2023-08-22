@@ -27,6 +27,9 @@ tasks.named('test') {
 
 jar {
 	enabled = false
+	manifest {
+        	attributes 'Main-Class': 'spring.hello.Hello'
+    	}
 }
 
 apply plugin: 'application'
