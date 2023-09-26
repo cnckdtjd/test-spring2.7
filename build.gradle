@@ -25,9 +25,9 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-jar {
-	enabled = false
+task buildJar(type: Jar) {
 	manifest {
         	attributes 'Main-Class': 'spring.hello.HelloApplication'
     	}
+	with jar
 }
