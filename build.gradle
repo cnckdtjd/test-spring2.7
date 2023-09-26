@@ -31,3 +31,12 @@ task buildJar(type: Jar) {
     	}
 	with jar
 }
+
+task buildFatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'spring.hello.HelloApplication'
+    }
+    duplicatesStrategy = DuplicatesStrategy.WARN
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
